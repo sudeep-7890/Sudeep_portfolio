@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\index.css">
+    <link rel="stylesheet" href="..\css\product.css">
+    <title>Online Store - Product Page</title>
+</head>
+
+<body>
+    <nav class="navbar bg">
+        <ol class="link-container">
+            <li><a class="link" href="#" active>home</a></li>
+            <li><a class="link" href="#">product</a></li>
+            <li><a class="link" href="#">About</a></li>
+            <li><a class="link" href="#">Contact</a></li>
+        </ol>
+
+        <div class="user-interact">
+            <div class="cart">
+                <img src="cart.png" class="cart-icon" alt="">
+                <span class="cart-count">00</span>
+            </div>
+            <div class="user">
+                <img src="user.png" alt="" class="user-icon">
+            </div>
+        </div>
+    </nav>
+    <section class="product-section">
+        <img src="product-image.png" alt="" class="product-image">
+        <div class="product-detail">
+            <h1 class="product-title">Premium Sofa</h1>
+            <p class="product-des">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="ratings">
+                <img src="fill star.png" alt="" class="star">
+                <img src="fill star.png" alt="" class="star">
+                <img src="fill star.png" alt="" class="star">
+                <img src="fill star.png" alt="" class="star">
+                <img src="fill star.png" alt="" class="star">
+                <span class="rating-count">4,025 reviews</span>
+            </div>
+            <p class="price">$ 499</p>
+            <div class="btn-container">
+                <button class="product-btn buy-btn">Buy now</button>
+                <button class="product-btn buy-btn">add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section class="detail-des">
+        <h1 class="section-title">Details</h1>
+        <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore atque dolorem
+            in dolore hic unde Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod similique tempore officia
+            distinctio, ullam voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione ea
+            debitis fugiat ab, hic voluptas accusamus, deserunt neque totam eligendi harum iure sint unde praesentium
+            aut ex, quia modi Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa cum quae omnis
+            officiis accusamus error obcaecati possimus velit, recusandae quod similique est ducimus fuga at saepe quos
+            facere maiores sit iste magnam numquam veniam itaque. Commodi architecto placeat est, velit dicta dolore
+            debitis dolores qui voluptatibus deleniti culpa expedita.</p>
+    </section>
+    <section class="review">
+        <h1 class="review-title">Reviews</h1>
+        <div class="review-container">
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="user 1.png" alt=""></div>
+                <h2 class="r-title">Best Quality More Than My Expectation</h2>
+                <p class="main-review">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="user 2.png" alt=""></div>
+                <h2 class="r-title">Super Expireance with Good Staff</h2>
+                <p class="main-review">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="user 3.png" alt=""></div>
+                <h2 class="r-title">Very friendly Staff to co-ordinate With</h2>
+                <p class="main-review">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="user 4.png" alt=""></div>
+                <h2 class="r-title">super Servicess.I Have Enjoyed your Company</h2>
+                <p class="main-review">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-review-section">
+        <h1 class="section-title">Add a Review</h1>
+        <input type="text" class="review-headline" placeholder="review-headline">
+        <textarea placeholder="Review" class="review-field"></textarea>
+        <p class="rating-text">How Much You Liked The Product</p>
+        <div class="star-container">
+            <img src="fill star.png" alt="" class="rating-star">
+            <img src="fill star.png" alt="" class="rating-star">
+            <img src="fill star.png" alt="" class="rating-star">
+            <img src="fill star.png" alt="" class="rating-star">
+            <img src="fill star.png" alt="" class="rating-star">
+        </div>
+        <button class="add-review-button">Add Review</button>
+    </section>
+
+    <section class="best-selling-product">
+        <h1 class="section-title">Similar Product</h1>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="product-1.png" alt="" class="product-img">
+                <p class="product-name">Lights </p>
+            </div>
+            <div class="product-card">
+                <img src="product-2.png" alt="" class="product-img">
+                <p class="product-name">Chair </p>
+            </div>
+            <div class="product-card">
+                <img src="product-3.png" alt="" class="product-img">
+                <p class="product-name">Storage </p>
+            </div>
+            <div class="product-card">
+                <img src="product-4.png" alt="" class="product-img">
+                <p class="product-name">Sofa </p>
+            </div>
+        </div>
+    </section>
+    <script>
+        let ratingstarinput = [...document.querySelectorAll('rating-star')];
+
+        ratingstarinput.map((star, index) => {
+            star.addEventListener('click', () => {
+                for (let i = 0; i < 5; i++) {
+                    if (i <= index) {
+                        ratingstarinput[i].src = 'fill star.png';
+                    } else {
+                        ratingstarinput[i].src = 'no fill star.png';
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
